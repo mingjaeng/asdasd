@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+{% load static %}
+{% load custom_filters %}
+
+<html lang="ko">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2더하기8은 12조</title>
+    <script>
+    const companyMap = {
+        "AP위성": "/detail/AP위성/",
+        "데브시스터즈": "/detail/데브시스터즈/",
+        "한선엔지니어링": "/detail/한선엔지니어링/",
+        "고려제강": "/detail/고려제강/",
+        "메카로": "/detail/메카로/",
+        "미래에셋증권": "/detail/미래에셋증권/",
+        "폴라리스AI": "/detail/폴라리스AI/",
+        "로보로보": "/detail/로보로보/",
+        "셀바스헬스케어": "/detail/셀바스헬스케어/",
+        "성우하이텍": "/detail/성우하이텍/",
+};
+
+    function goToCompanyPage() {
+        const input = document.getElementById("searchInput").value.trim();
+        if (companyMap[input]) {
+            window.location.href = companyMap[input];
+        } else {
+            alert("해당 기업 정보를 찾을 수 없습니다.");
+        }
+        return false;
+    }
+    // 페이지 로드 후 실행되는 함수
+    window.onload = function() {
+        setupSubNavigation();
+        setupTabs();
+    };
+    // 서브 네비게이션 기능 설정
+    function setupSubNavigation() {
+        const subNavItems = document.querySelectorAll('.sub-nav-items li');
+        subNavItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const parentSubNav = this.closest('.sub-nav-items');
+                parentSubNav.querySelectorAll('li').forEach(navItem => navItem.classList.remove('active'));
+                this.classList.add('active');
+                const subPageName = this.getAttribute('data-subpage');
+                if (subPageName) {
+                    const subPages = document.querySelectorAll('.sub-page');
+                    subPages.forEach(subPage => {
+                        subPage.classList.remove('active');
+                    });
+                    const targetSubPage = document.getElementById(subPageName);
+                    if (targetSubPage) {
+                        targetSubPage.classList.add('active');
+                    }
+                }
+            });
+        });
+    }
+    // 탭 메뉴 설정
+    function setupTabs() {
+        const tabItems = document.querySelectorAll('.tab-item');
+        tabItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const parentTabMenu = this.closest('.tab-menu');
+                parentTabMenu.querySelectorAll('.tab-item').forEach(tab => tab.classList.remove('active'));
+                this.classList.add('active');
+                const targetId = this.getAttribute('data-target');
+                if (targetId) {
+                    const parentPage = this.closest('.sub-page');
+                    parentPage.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    const targetContent = document.getElementById(targetId);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                }
+            });
+        });
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .logo span:first-child {
+            color: #fff;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            width: 300px;
+            font-size: 14px;
+        }
+        .search-bar button {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 0 8px 8px 0;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .search-bar button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .main-nav {
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav-items {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style-type: none;
+        }
+        .nav-items li {
+            padding: 15px 20px;
+            color: #333;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 5px;
+        }
+        .nav-items li:hover, .nav-items li.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .sub-nav {
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .sub-nav-items {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style-type: none;
+            padding: 10px 15px;
+            gap: 12px;
+        }
+        .sub-nav-items li {
+            padding: 8px 15px;
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .sub-nav-items li:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        .sub-nav-items li.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .company-info {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .company-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: none;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .company-code {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        .stat-box {
+            text-align: center;
+            flex: 1;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .stat-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+        .stat-value {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .charts {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        .chart {
+            flex: 1;
+            background: #f8f9ff;
+            border: 1px solid #e0e0e0;
+            height: 200px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .chart-title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+        .chart-value {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chart-content {
+            height: 80%;
+            margin-top: 40px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .chart-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            top: 50%;
+            z-index: 2;
+        }
+        .chart-line.blue {
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            top: 30%;
+        }
+        .detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .detail-table th, .detail-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: center;
+        }
+        .detail-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .detail-table tbody tr:nth-child(even) {
+            background-color: #f8f9ff;
+        }
+        .detail-table tbody tr:hover {
+            background-color: #e8f0fe;
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        .positive {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+        .negative {
+            color: #1976d2;
+            font-weight: 600;
+        }
+        .neutral {
+            color: #666;
+        }
+        .tab-menu {
+            display: flex;
+            gap: 12px;
+            margin: 16px 0;
+            padding: 0;
+            list-style: none;
+            background: none;
+            border-bottom: none;
+        }
+        .tab-item {
+            padding: 12px 20px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: none;
+        }
+        .tab-item:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        .tab-item.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            border-bottom: none;
+        }
+        .tab-content {
+            display: none;
+            margin-top: 10px;
+            animation: fadeIn 0.3s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* 섹션 박스 레이아웃 */
+        .section-box {
+            margin-top: 30px;
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* 재무제표 상세목차 */
+        .financial-statement {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .financial-statement th, .financial-statement td {
+            border: 1px solid #e0e0e0;
+            padding: 12px 15px;
+        }
+        .financial-statement th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: left;
+            font-weight: 600;
+        }
+        .financial-statement thead th {
+            text-align: center;
+            font-weight: bold;
+        }
+        .financial-statement tbody tr:nth-child(even) {
+            background-color: #f8f9ff;
+        }
+        .financial-statement tbody tr:hover {
+            background-color: #e8f0fe;
+            transition: all 0.2s ease;
+        }
+        .financial-statement .category {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            font-weight: bold;
+        }
+        .financial-statement .subcategory {
+            padding-left: 20px;
+        }
+        .financial-statement .item {
+            padding-left: 35px;
+        }
+        .year-selector {
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        .year-selector select {
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .statement-type {
+            margin-bottom: 15px;
+        }
+        .statement-type select {
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .unit-info {
+            text-align: right;
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        /* 기업정보 상세목차 */
+        .company-profile {
+            display: none;
+            padding: 20px;
+        }
+        .company-profile.active {
+            display: block;
+        }
+        .company-profile-header {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .company-profile-section {
+            margin-bottom: 30px;
+        }
+        .company-profile-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .company-detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .company-detail-table th, .company-detail-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+        }
+        .company-detail-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 150px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .company-detail-table tbody tr:nth-child(even) {
+            background-color: #f8f9ff;
+        }
+        /* 페이지 상세목차 */
+        .page-container {
+            display: none;
+        }
+        .page-container.active {
+            display: block;
+        }
+        /* 경제지표 상세목차 */
+        .economic-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .economic-table th,
+        .economic-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: center;
+        }
+        .economic-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .economic-table thead th {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .economic-table tbody tr:nth-child(even) {
+            background-color: #f8f9ff;
+        }
+        .economic-table tbody tr:hover {
+            background-color: #e8f0fe;
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        .economic-table th:first-child,
+        .economic-table td:first-child {
+            width: 40%;
+            text-align: left;
+            padding-left: 20px;
+            font-weight: 500;
+        }
+        .economic-table th:nth-child(2),
+        .economic-table td:nth-child(2) {
+            width: 60%;
+            font-weight: 600;
+        }
+        .ratio-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .ratio-table th, .ratio-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: center;
+        }
+        .ratio-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+        .ratio-table tbody tr:nth-child(even) {
+            background-color: #f8f9ff;
+        }
+        .ratio-table tbody tr:hover {
+            background-color: #e8f0fe;
+            transition: all 0.2s ease;
+        }
+        .ratio-table .ratio-category {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            font-weight: bold;
+            text-align: left;
+        }
+        /* 투자지표 상세목차 */
+        .investment-indicators {
+            margin-top: 20px;
+        }
+        .indicator-chart {
+            width: 100%;
+            height: 300px;
+            background: #f8f9ff;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .indicator-chart-title {
+            padding: 15px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .indicator-chart-content {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        /* 리포트 상세목차 */
+        .report-list {
+            margin-top: 20px;
+        }
+        .report-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px;
+            background: #f8f9ff;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .report-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .report-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .report-metadata {
+            display: flex;
+            font-size: 13px;
+            color: #666;
+        }
+        .report-metadata span {
+            margin-right: 15px;
+        }
+        .report-summary {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+        }
+        /* 서브 페이지 스타일 */
+        .sub-page {
+            display: none;
+        }
+        .sub-page.active {
+            display: block;
+        }
+        /* 로딩 상태 */
+        .loading {
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span>2더하기8은</span> 12조
+                </a>
+            </div>
+            <div class="search-bar" id="search-bar" style="position: relative;">
+                <form onsubmit="return false;" style="display: flex; flex-direction: column; width: 100%;">
+                    <div style="display: flex; align-items: center;">
+                        <input type="text" id="searchInput" placeholder="기업명 또는 기업코드 입력" 
+                        style="width: 200px; padding: 8px; font-size: 14px;" />
+                        <button type="submit" id="searchButton" style="margin-left: 5px; padding: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="autocomplete-list"
+                    style="position: absolute; top: 40px; left: 0; width: 200px;
+                    background: white; border: 1px solid #ccc; border-top: none;
+                    max-height: 200px; overflow-y: auto; z-index: 999;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const companyMap = {
+            "AP위성": "/detail/AP위성/",
+            "데브시스터즈": "/detail/데브시스터즈/",
+            "한선엔지니어링": "/detail/한선엔지니어링/",
+            "고려제강": "/detail/고려제강/",
+            "메카로": "/detail/메카로/",
+            "미래에셋증권": "/detail/미래에셋증권/",
+            "폴라리스AI": "/detail/폴라리스AI/",
+            "로보로보": "/detail/로보로보/",
+            "셀바스헬스케어": "/detail/셀바스헬스케어/",
+            "성우하이텍": "/detail/성우하이텍/"
+        };
+        const input = document.getElementById("searchInput");
+        const list = document.getElementById("autocomplete-list");
+        const button = document.getElementById("searchButton");
+        input.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+        list.innerHTML = "";
+        if (!value) return;
+        Object.keys(companyMap).forEach(company => {
+            if (company.toLowerCase().includes(value)) {
+            const item = document.createElement("div");
+            item.textContent = company;
+            item.style.padding = "10px 10px 10px 15px";
+            item.style.cursor = "pointer";
+            item.style.textAlign = "left";
+            item.style.color = "black";
+            item.addEventListener("click", function () {
+                input.value = company;
+                list.innerHTML = "";
+            });
+            item.addEventListener("mouseover", function () {
+                item.style.backgroundColor = "#f0f0f0";
+            });
+            item.addEventListener("mouseout", function () {
+                item.style.backgroundColor = "white";
+            });
+            list.appendChild(item);
+            }
+        });
+        });
+        document.addEventListener("click", function (e) {
+        if (!e.target.closest("#search-bar")) {
+            list.innerHTML = "";
+        }
+        });
+        button.addEventListener("click", function () {
+        const keyword = input.value.trim();
+        if (companyMap[keyword]) {
+            window.location.href = companyMap[keyword];
+        } else {
+            alert("검색 결과가 없습니다.");
+        }
+        });
+    });
+    </script>
+    <!-- 기업정보 페이지-->
+    <div id="company-info-page" class="page-container active">
+        <div class="sub-nav">
+            <ul class="sub-nav-items">
+                <li data-subpage="company-overview-page" class="active">기업개요</li>
+                <li data-subpage="financial-statements-page">재무제표</li>
+                <li data-subpage="financial-ratios-page">경제지표</li>
+                <li data-subpage="investment-indicators-page">투자지표</li>
+                <li data-subpage="reports-page">리포트</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 기업개요 페이지 -->
+    <div id="company-overview-page" class="sub-page active">
+        <div class="company-info">
+            <div class="company-header">
+                <div>
+                    <span class="company-name">{{ company_name }}</span>
+                    <span class="company-code">{{ company_info.종목코드 }}</span>
+                    <span>12월 결산</span>
+                </div>
+                <div>
+                    KOSDAQ 코스닥 IT 서비스 | FICS 게임 소프트웨어
+                </div>
+            </div>
+            <div class="section-box">
+                <h3 class="section-title">기업개요</h3>
+                <div class="company-profile active">
+                    <div class="company-profile-section">
+                        <table class="company-detail-table">
+                            <colgroup>
+                                <col style="width: 15%;">
+                                <col style="width: 35%;">
+                                <col style="width: 15%;">
+                                <col style="width: 35%;">
+                            </colgroup>
+                            <tr>
+                                <th>기업명</th>
+                                <td>{{ company_name }}</td>
+                                <th>대표자</th>
+                                <td>{{ company_info.대표이사 }}</td>
+                            </tr>
+                            <tr>
+                                <th>설립일</th>
+                                <td>{{ company_info.설립일 }}</td>
+                                <th>상장일</th>
+                                <td>{{ company_info.상장일 }}</td>
+                            </tr>
+                            <tr>
+                                <th>업종명</th>
+                                <td colspan="3">{{ company_info.업종명 }}</td>
+                            </tr>
+                            <tr>
+                                <th>주소</th>
+                                <td colspan="3">{{ company_info.본사주소 }}</td>
+                            </tr>
+                            <tr>
+                                <th>홈페이지</th>
+                                 <a href="{{ company_info.홈페이지 }}" target="_blank">{{ company_info.홈페이지 }}</a>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    .company-detail-table th,
+    .company-detail-table td {
+        text-align: left;
+        vertical-align: middle;
+        padding-left: 10px;
+    }
+
+    .company-detail-table td[colspan] {
+        text-align: left;
+    }
+    </style>
+
+    <!-- 재무제표 페이지 -->
+    <div id="financial-statements-page" class="sub-page">
+    <div class="company-info">
+        <div class="company-header">
+        <div>
+            <span class="company-name">{{ company_name }}</span>
+            <span class="company-code">{{ company_info.종목코드 }}</span>
+            <span>12월 결산</span>
+        </div>
+        <div>KOSDAQ | 업종 정보는 추후 추가 가능</div>
+        </div>
+
+        <!-- 📊 재무상태표 -->
+        <div class="section-box">
+        <h3 class="section-title">재무상태표</h3>
+        <ul class="tab-menu">
+            {% for year in years %}
+            <li class="{% if forloop.first %}active{% endif %}" data-tab="bs-{{ year }}">연도: {{ year }}</li>
+            {% endfor %}
+        </ul>
+        {% for year in years %}
+        <div class="tab-content {% if forloop.first %}active{% endif %}" id="bs-{{ year }}">
+            <table class="financial-table">
+            <thead>
+                <tr>
+                <th>항목</th>
+                <th>금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in financial_data|get_item:"재무상태표_"|add:year %}
+                <tr>
+                <td>{{ row.account_nm }}</td>
+                <td>{{ row.thstrm_amount|default:"-" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="2">데이터 없음</td></tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        {% endfor %}
+        </div>
+
+        <!-- 📈 포괄손익계산서 -->
+        <div class="section-box">
+        <h3 class="section-title">포괄손익계산서</h3>
+        <ul class="tab-menu">
+            {% for year in years %}
+            <li class="{% if forloop.first %}active{% endif %}" data-tab="is-{{ year }}">연도: {{ year }}</li>
+            {% endfor %}
+        </ul>
+        {% for year in years %}
+        <div class="tab-content {% if forloop.first %}active{% endif %}" id="is-{{ year }}">
+            <table class="financial-table">
+            <thead>
+                <tr>
+                <th>항목</th>
+                <th>금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in financial_data|get_item:"포괄손익계산서_"|add:year %}
+                <tr>
+                <td class="depth-{{ row.account_depth|default:'0' }}">{{ row.account_nm }}</td>
+                <td>{{ row.thstrm_amount|default:"-" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="2">데이터 없음</td></tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        {% endfor %}
+        </div>
+
+        <!-- 💸 현금흐름표 -->
+        <div class="section-box">
+        <h3 class="section-title">현금흐름표</h3>
+        <ul class="tab-menu">
+            {% for year in years %}
+            <li class="{% if forloop.first %}active{% endif %}" data-tab="cf-{{ year }}">연도: {{ year }}</li>
+            {% endfor %}
+        </ul>
+        {% for year in years %}
+        <div class="tab-content {% if forloop.first %}active{% endif %}" id="cf-{{ year }}">
+            <table class="financial-table">
+            <thead>
+                <tr>
+                <th>항목</th>
+                <th>금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in financial_data|get_item:"현금흐름표_"|add:year %}
+                <tr>
+                <td class="depth-{{ row.account_depth|default:'0' }}">{{ row.account_nm }}</td>
+                <td>{{ row.thstrm_amount|default:"-" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="2">데이터 없음</td></tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+    </div>
+    <script>
+    document.querySelectorAll('.tab-menu li').forEach(tab => {
+        tab.addEventListener('click', function () {
+            document.querySelectorAll('.tab-menu li').forEach(li => li.classList.remove('active'));
+            this.classList.add('active');
+            const target = this.getAttribute('data-tab');
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(target).classList.add('active');
+        });
+        });
+    </script>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+    .company-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .company-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+    .company-code {
+        background: rgba(255,255,255,0.2);
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin-right: 15px;
+    }
+    /* 탭 메뉴 */
+    .tab-menu {
+        display: flex;
+        gap: 12px;
+        margin: 16px 0;
+        padding: 0;
+        list-style: none;
+    }
+    .tab-menu li {
+        padding: 12px 20px;
+        background: #f1f1f1;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    .tab-menu li:hover {
+        background: #e0e0e0;
+        transform: translateY(-2px);
+    }
+    .tab-menu li.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    .tab-content {
+        display: none;
+        margin-top: 10px;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    /* 섹션 박스 */
+    .section-box {
+        margin-top: 30px;
+        padding: 30px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .section-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+        border-bottom: 3px solid linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding-bottom: 10px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    /* 재무제표 영역 */
+    .inancial-table-wrapper {
+        margin-top: 20px;
+        overflow-x: auto;
+    }
+    .financial-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        margin-top: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    .financial-table th,
+    .financial-table td {
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        text-align: center;
+    }
+    .financial-table thead {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+    .financial-table thead th {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    .financial-table tbody tr:nth-child(even) {
+        background-color: #f8f9ff;
+    }
+    .financial-table tbody tr:hover {
+        background-color: #e8f0fe;
+        transform: scale(1.01);
+        transition: all 0.2s ease;
+    }
+    .financial-table th:first-child,
+    .financial-table td:first-child {
+        width: 25%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .financial-table th:nth-child(n+2):nth-child(-n+4),
+    .financial-table td:nth-child(n+2):nth-child(-n+4) {
+        width: 25%; 
+    }
+    .financial-table td.depth-0 {
+        font-weight: bold;
+        background-color: #f0f4ff;
+    }
+    .financial-table td.depth-1 {
+        padding-left: 35px;
+        font-weight: 500;
+    }
+    .financial-table td.depth-2 {
+        padding-left: 50px;
+        color: #555;
+    }
+    .financial-table thead th:first-child {
+        text-align: center;
+    }
+    </style>
+
+    <!-- 경제지표 페이지 -->
+    <!-- 경제지표 페이지 -->
+    <div id="financial-ratios-page" class="sub-page">
+    <div class="company-info">
+        <div class="company-header">
+        <div>
+            <span class="company-name">{{ company_name }}</span>
+            <span class="company-code">{{ company_info.종목코드 }}</span>
+            <span>12월 결산</span>
+        </div>
+        <div>KOSDAQ | 업종 정보는 추후 추가 가능</div>
+        </div>
+
+        <div class="section-box">
+        <h3 class="section-title">경제지표</h3>
+        <table class="economic-table">
+            <thead>
+            <tr>
+                <th>항목</th>
+                <th>현재</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>환율 (USD/KRW)</td>
+                <td>{{ economic_index.USD_KRW|default:"--" }}</td>
+            </tr>
+            <tr>
+                <td>금시세 (1g)</td>
+                <td>{{ economic_index.국내 금|default:"--" }}</td>
+            </tr>
+            <tr>
+                <td>KOSPI</td>
+                <td>{{ economic_index.KOSPI|default:"--" }}</td>
+            </tr>
+            <tr>
+                <td>KOSDAQ</td>
+                <td>{{ economic_index.KOSDAQ|default:"--" }}</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </div>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+    .company-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .company-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+    .company-code {
+        background: rgba(255,255,255,0.2);
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin-right: 15px;
+    }
+    .tab-menu {
+        display: flex;
+        gap: 12px;
+        margin: 16px 0;
+        padding: 0;
+        list-style: none;
+    }
+    .tab-menu li {
+        padding: 12px 20px;
+        background: #f1f1f1;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    .tab-menu li:hover {
+        background: #e0e0e0;
+        transform: translateY(-2px);
+    }
+    .tab-menu li.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    .tab-content {
+        display: none;
+        margin-top: 10px;
+        animation: fadeIn 0.3s ease;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .section-box {
+        margin-top: 30px;
+        padding: 30px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .section-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 10px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .economic-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        margin-top: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    .economic-table th,
+    .economic-table td {
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        text-align: center;
+    }
+    .economic-table thead {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+    .economic-table thead th {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    .economic-table tbody tr:nth-child(even) {
+        background-color: #f8f9ff;
+    }
+    .economic-table tbody tr:hover {
+        background-color: #e8f0fe;
+        transform: scale(1.01);
+        transition: all 0.2s ease;
+    }
+    .economic-table th:first-child,
+    .economic-table td:first-child, 
+    .economic-table th:nth-child(2),
+    .economic-table td:nth-child(2) {
+        width: 50%;
+        text-align: center; 
+        padding-left: 0; 
+        font-weight: 500;
+    }
+    .positive {
+        color: #d32f2f;
+        font-weight: 600;
+    }
+    .negative {
+        color: #1976d2;
+        font-weight: 600;
+    }
+    .neutral {
+        color: #666;
+    }
+    .loading {
+        color: #999;
+        font-style: italic;
+    }
+    </style>
+
+    <!-- 투자지표 페이지 -->
+    <div id="investment-indicators-page" class="sub-page">
+        <div class="company-info">
+            <div class="company-header">
+                <div>
+                    <span class="company-name">데브시스터즈</span>
+                    <span class="company-code">194480</span>
+                    <span>12월 결산</span>
+                </div>
+                <div>
+                    KOSDAQ 코스닥 IT 서비스 | FICS 게임 소프트웨어
+                </div>
+            </div>
+            <!-- 투자지표 섹션 -->
+            <div class="section-box">
+                <h3 class="section-title">투자지표</h3>
+                <!-- 연도 선택 탭 -->
+                <div class="year-tabs">
+                    <button onclick="showIndicators(event, '2024')" class="active">2024</button>
+                    <button onclick="showIndicators(event, '2023')">2023</button>
+                    <button onclick="showIndicators(event, '2022')">2022</button>
+                </div>
+                <!-- 연도별 투자지표 섹션 -->
+                <div id="indicators-2024" class="year-indicators active">
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">📈 수익성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>영업이익률</td><td>11.51%</td></tr>
+                                <tr><td>순이익률</td><td>11.97%</td></tr>
+                                <tr><td>ROE</td><td>19.72%</td></tr>
+                                <tr><td>ROA</td><td>11.31%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">🛡️ 안정성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>부채비율</td><td>68.91%</td></tr>
+                                <tr><td>이자보상배율</td><td>19.51%</td></tr>
+                                <tr><td>유동비율</td><td>345.26%</td></tr>
+                                <tr><td>당좌비율</td><td>116.00%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">🚀 성장성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>매출액 증가율</td><td>46.57%</td></tr>
+                                <tr><td>영업이익 증가율</td><td>156.64%</td></tr>
+                                <tr><td>순이익 증가율</td><td>156.86%</td></tr>
+                                <tr><td>총자산 증가율</td><td>8.60%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">💹 투자/가치평가 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>EPS</td><td>2,327</td></tr>
+                                <tr><td>BPS</td><td>13,986</td></tr>
+                                <tr><td>PER</td><td>11.90배</td></tr>
+                                <tr><td>PBR</td><td>1.98배</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            <div id="indicators-2023" class="year-indicators">
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">📈 수익성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>영업이익률</td><td>-29.78%</td></tr>
+                                <tr><td>순이익률</td><td>-30.86%</td></tr>
+                                <tr><td>ROE</td><td>-31.75%</td></tr>
+                                <tr><td>ROA</td><td>-18.41%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">🛡️ 안정성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>부채비율</td><td>78.18%</td></tr>
+                                <tr><td>이자보상배율</td><td>-32.85%</td></tr>
+                                <tr><td>유동비율</td><td>311.59%</td></tr>
+                                <tr><td>당좌비율</td><td>135.03%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">🚀 성장성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>매출액 증가율</td><td>-24.85%</td></tr>
+                                <tr><td>영업이익 증가율</td><td>-141.04%</td></tr>
+                                <tr><td>순이익 증가율</td><td>-642.87%</td></tr>
+                                <tr><td>총자산 증가율</td><td>-20.19%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">💹 투자/가치평가 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>EPS</td><td>-4,162</td></tr>
+                                <tr><td>BPS</td><td>12,332</td></tr>
+                                <tr><td>PER</td><td>--배</td></tr>
+                                <tr><td>PBR</td><td>3.93배</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="indicators-2022" class="year-indicators">
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">📈 수익성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>영업이익률</td><td>-9.29%</td></tr>
+                                <tr><td>순이익률</td><td>-3.12%</td></tr>
+                                <tr><td>ROE</td><td>-3.88%</td></tr>
+                                <tr><td>ROA</td><td>-2.33%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">🛡️ 안정성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>부채비율</td><td>65.76%</td></tr>
+                                <tr><td>이자보상배율</td><td>-16.57%</td></tr>
+                                <tr><td>유동비율</td><td>578.39%</td></tr>
+                                <tr><td>당좌비율</td><td>262.08%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">🚀 성장성 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>매출액 증가율</td><td>-41.94%</td></tr>
+                                <tr><td>영업이익 증가율</td><td>-135.14%</td></tr>
+                                <tr><td>순이익 증가율</td><td>-111.09%</td></tr>
+                                <tr><td>총자산 증가율</td><td>9.76%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="indicator-category">
+                        <h4 class="indicator-title">💹 투자/가치평가 지표</h4>
+                        <table class="investment-table">
+                            <tbody>
+                                <tr><td>EPS</td><td>-566</td></tr>
+                                <tr><td>BPS</td><td>16,951</td></tr>
+                                <tr><td>PER</td><td>--배</td></tr>
+                                <tr><td>PBR</td><td>3.30배</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    .section-box {
+        padding: 25px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        margin-top: 30px;          
+    }
+    .section-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #333;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 6px;
+    }
+    .year-tabs {
+        margin-bottom: 15px;
+    }
+    .year-tabs button {
+        margin-right: 8px;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        background: #f2f2f2;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .year-tabs button.active {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+    .year-indicators { 
+        display: none; 
+    }
+    .year-indicators.active { 
+        display: block; 
+    }
+    .investment-table-wrapper {     
+        margin-top: 20px;
+        overflow-x: auto;
+    }
+    .investment-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        table-layout: fixed;         
+    }
+    .investment-table th,
+    .investment-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    .investment-table thead {
+        background-color: #f8f8f8;
+    }
+    .investment-table tbody tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+    .investment-table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+    .investment-table th:nth-child(1),
+    .investment-table td:nth-child(1),
+    .investment-table th:nth-child(2),
+    .investment-table td:nth-child(2) {
+        width: 50%;
+    }
+    .investment-table {
+        margin-bottom: 30px;
+    }
+    </style>
+    <script>
+    //연도별 투자지표를 전환
+    function showIndicators(event, year) {
+        const allSections = document.querySelectorAll('.year-indicators');
+        allSections.forEach(section => section.classList.remove('active'));
+        const selectedSection = document.getElementById('indicators-' + year);
+        if (selectedSection) selectedSection.classList.add('active');
+        const allButtons = document.querySelectorAll('.year-tabs button');
+        allButtons.forEach(btn => btn.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+        }
+    </script>
+    <!-- 리포트 페이지 -->
+    <div id="reports-page" class="sub-page">
+    <div class="company-info">
+        <div class="company-header">
+        <div>
+            <span class="company-name">{{ company_name }}</span>
+            <span class="company-code">{{ company_info.종목코드 }}</span>
+            <span>12월 결산</span>
+        </div>
+        <div>
+            KOSDAQ | 업종 정보는 추후 추가 가능
+        </div>
+        </div>
+
+        <!-- 리포트 섹션 -->
+        <div class="section-box">
+        <h3 class="section-title">기업 리포트</h3>
+        <iframe 
+            src="{{ report_url }}" 
+            style="width: 100%; height: 800px; border: none;"
+            title="기업 리포트">
+        </iframe>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
