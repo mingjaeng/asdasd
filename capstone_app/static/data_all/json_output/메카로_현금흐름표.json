@@ -1,0 +1,344 @@
+[
+  {
+    "concept_id": "ifrs-full_CashFlowsFromUsedInOperatingActivities",
+    "label_ko": "영업활동현금흐름",
+    "label_en": "Cash flows from (used in) operating activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "영업활동현금흐름",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "entity00652007_udf_CF_202284161448182_CashFlowsFromUsedInOperatingActivities",
+    "label_ko": "영업에서 창출된 현금흐름",
+    "label_en": "Cash flow generated from operations",
+    "class0": "현금흐름표 [개요]",
+    "class1": "영업활동현금흐름",
+    "class2": "영업에서 창출된 현금흐름",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_InterestReceivedClassifiedAsOperatingActivities",
+    "label_ko": "이자수취",
+    "label_en": "Interest received",
+    "class0": "현금흐름표 [개요]",
+    "class1": "영업활동현금흐름",
+    "class2": "이자수취",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_InterestPaidClassifiedAsOperatingActivities",
+    "label_ko": "이자지급",
+    "label_en": "Interest paid, classified as operating activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "영업활동현금흐름",
+    "class2": "이자지급",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+    "label_ko": "법인세의 납부",
+    "label_en": "Income taxes paid (refund), classified as operating activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "영업활동현금흐름",
+    "class2": "법인세의 납부",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_CashFlowsFromUsedInInvestingActivities",
+    "label_ko": "투자활동현금흐름",
+    "label_en": "Cash flows from (used in) investing activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfShortTermFinancialInstruments",
+    "label_ko": "단기금융상품의 처분",
+    "label_en": "Proceeds from sales of short term Financial Instruments",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "단기금융상품의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_PurchaseOfShortTermFinancialInstruments",
+    "label_ko": "단기금융상품의 취득",
+    "label_en": "Purchase of short term Financial Instruments",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "단기금융상품의 취득",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfLongTermFinancialInstruments",
+    "label_ko": "장기금융상품의 처분",
+    "label_en": "Proceeds from sales of long-term financial instruments",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "장기금융상품의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_PurchaseOfLongTermFinancialInstruments",
+    "label_ko": "장기금융상품의 취득",
+    "label_en": "Purchase of long-term financial instruments",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "장기금융상품의 취득",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfFairValueFinancialAsset",
+    "label_ko": "당기손익-공정가치측정금융자산의 처분",
+    "label_en": "Proceeds from sales of fair value financial asset",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "당기손익-공정가치측정금융자산의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_PurchaseOfFairValueFinancialAsset",
+    "label_ko": "당기손익-공정가치측정금융자산의 취득",
+    "label_en": "Purchase of fair value financial asset",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "당기손익-공정가치측정금융자산의 취득",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfShortTermLoansAndReceivables",
+    "label_ko": "단기대여금및수취채권의 처분",
+    "label_en": "Proceeds from sales of short-term loans and receivables",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "단기대여금및수취채권의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_PurchaseOfShortTermLoansAndReceivables",
+    "label_ko": "단기대여금및수취채권의 취득",
+    "label_en": "Purchase of short-term loans and receivables",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "단기대여금및수취채권의 취득",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfLongTermLoansAndReceivables",
+    "label_ko": "장기대여금및수취채권의 처분",
+    "label_en": "Proceeds from sales of long-term loans and receivables",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "장기대여금및수취채권의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_PurchaseOfLongTermLoansAndReceivables",
+    "label_ko": "장기대여금의 대여",
+    "label_en": "Purchase of long-term loans and receivables",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "장기대여금의 대여",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_GainsOnSaleOfInvestmentsInSubsidiaries",
+    "label_ko": "종속기업투자주식처분이익",
+    "label_en": "Gains on sale of investments in subsidiaries",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "종속기업투자주식처분이익",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_PurchaseOfInterestsInAssociates",
+    "label_ko": "관계기업투자자산의 취득",
+    "label_en": "Purchase of interests in associates",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "관계기업투자자산의 취득",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+    "label_ko": "유형자산의 처분",
+    "label_en": "Proceeds from sales of property, plant and equipment",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "유형자산의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+    "label_ko": "유형자산의 취득",
+    "label_en": "Purchase of property, plant and equipment, classified as investing activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "유형자산의 취득",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_BorrowingCostsCapitalised",
+    "label_ko": "자본화된 차입원가",
+    "label_en": "Borrowing costs capitalised",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "자본화된 차입원가",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProceedsFromSalesOfIntangibleAssetsClassifiedAsInvestingActivities",
+    "label_ko": "무형자산의 처분",
+    "label_en": "Proceeds from sales of intangible assets",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "무형자산의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities",
+    "label_ko": "무형자산의 취득",
+    "label_en": "Purchase of intangible assets",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "무형자산의 취득",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfLoansAndReceivables",
+    "label_ko": "장기기타채권의 감소",
+    "label_en": "Proceeds from sales of loans and receivables",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "장기기타채권의 감소",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_PurchaseOfLoansAndReceivables",
+    "label_ko": "장기기타채권의 증가",
+    "label_en": "Purchase of loans and receivables",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "장기기타채권의 증가",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProceedsFromGovernmentGrantsClassifiedAsInvestingActivities",
+    "label_ko": "정부보조금의 수취",
+    "label_en": "Proceeds from government grants",
+    "class0": "현금흐름표 [개요]",
+    "class1": "투자활동현금흐름",
+    "class2": "정부보조금의 수취",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_CashFlowsFromUsedInFinancingActivities",
+    "label_ko": "재무활동현금흐름",
+    "label_en": "Cash flows from (used in) financing activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromShortTermBorrowings",
+    "label_ko": "단기차입금의 증가",
+    "label_en": "Proceeds from short term borrowings",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "단기차입금의 증가",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_RepaymentsOfShortTermBorrowings",
+    "label_ko": "단기차입금의 상환",
+    "label_en": "Repayments of short term borrowings",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "단기차입금의 상환",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_RepaymentsOfLongTermBorrowings",
+    "label_ko": "장기차입금의 상환",
+    "label_en": "Repayments of long term borrowings",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "장기차입금의 상환",
+    "class3": ""
+  },
+  {
+    "concept_id": "entity00652007_PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivitiesOfCashFlowsFromUsedInFinancingActivities",
+    "label_ko": "유동리스부채의 감소",
+    "label_en": "Payments of lease liabilities, classified as financing activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "유동리스부채의 감소",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_DispositionOfTreasuryShares",
+    "label_ko": "자기주식의 처분",
+    "label_en": "Disposition of treasury shares",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "자기주식의 처분",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_DecreaseInGuaranteeDepositsAsFinancialActivities",
+    "label_ko": "임대보증금의 감소",
+    "label_en": "Decrease in guarantee deposits as financial activities",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "임대보증금의 감소",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_DividendsPaidClassifiedAsFinancingActivities",
+    "label_ko": "배당금지급",
+    "label_en": "Dividends paid",
+    "class0": "현금흐름표 [개요]",
+    "class1": "재무활동현금흐름",
+    "class2": "배당금지급",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_EffectOfExchangeRateChangesOnCashAndCashEquivalents",
+    "label_ko": "현금및현금성자산의 환율변동효과",
+    "label_en": "Effect of exchange rate changes on cash and cash equivalents",
+    "class0": "현금흐름표 [개요]",
+    "class1": "현금및현금성자산의 환율변동효과",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_IncreaseDecreaseInCashAndCashEquivalents",
+    "label_ko": "현금및현금성자산의 증가(감소)",
+    "label_en": "Net increase (decrease) in cash and cash equivalents",
+    "class0": "현금흐름표 [개요]",
+    "class1": "현금및현금성자산의 증가(감소)",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_CashAndCashEquivalentsAtBeginningOfPeriodCf",
+    "label_ko": "기초의 현금및현금성자산",
+    "label_en": "Cash and cash equivalents at beginning of period",
+    "class0": "현금흐름표 [개요]",
+    "class1": "기초의 현금및현금성자산",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_CashAndCashEquivalentsAtEndOfPeriodCf",
+    "label_ko": "기말의 현금및현금성자산",
+    "label_en": "Cash and cash equivalents at end of period",
+    "class0": "현금흐름표 [개요]",
+    "class1": "기말의 현금및현금성자산",
+    "class2": "",
+    "class3": ""
+  }
+]

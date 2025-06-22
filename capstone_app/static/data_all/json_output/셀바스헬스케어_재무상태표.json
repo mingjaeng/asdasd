@@ -1,0 +1,416 @@
+[
+  {
+    "concept_id": "ifrs-full_CurrentAssets",
+    "label_ko": "유동자산",
+    "label_en": "Current assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_CashAndCashEquivalents",
+    "label_ko": "현금및현금성자산",
+    "label_en": "Cash and cash equivalents",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "현금및현금성자산"
+  },
+  {
+    "concept_id": "dart_ShortTermTradeReceivable",
+    "label_ko": "매출채권",
+    "label_en": "Short-term trade Receivable",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "매출채권"
+  },
+  {
+    "concept_id": "ifrs-full_TradeAndOtherCurrentReceivables",
+    "label_ko": "기타수취채권",
+    "label_en": "other current receivables",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "기타수취채권"
+  },
+  {
+    "concept_id": "ifrs-full_OtherCurrentFinancialAssets",
+    "label_ko": "기타유동금융자산",
+    "label_en": "Other current financial assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "기타유동금융자산"
+  },
+  {
+    "concept_id": "entity01047451_udf_BS_202531814577460OfCurrentAssets",
+    "label_ko": "단기투자자산",
+    "label_en": "Current investments",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "단기투자자산"
+  },
+  {
+    "concept_id": "ifrs-full_Inventories",
+    "label_ko": "재고자산",
+    "label_en": "Current inventories",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "재고자산"
+  },
+  {
+    "concept_id": "ifrs-full_CurrentContractAssets",
+    "label_ko": "계약자산",
+    "label_en": "Current contract assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "계약자산"
+  },
+  {
+    "concept_id": "ifrs-full_CurrentTaxAssets",
+    "label_ko": "당기법인세자산",
+    "label_en": "Current tax assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "당기법인세자산"
+  },
+  {
+    "concept_id": "ifrs-full_OtherCurrentAssets",
+    "label_ko": "기타유동자산",
+    "label_en": "Other current assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "유동자산",
+    "class3": "기타유동자산"
+  },
+  {
+    "concept_id": "entity01047451_udf_BS_2022318113220939_AssetsAbstract",
+    "label_ko": "매각예정자산",
+    "label_en": "Non-current Assets for Sale",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "매각예정자산",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_NoncurrentAssets",
+    "label_ko": "비유동자산",
+    "label_en": "Non-current assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_LongTermTradeAndOtherNonCurrentReceivablesGross",
+    "label_ko": "장기기타수취채권",
+    "label_en": "Long-term trade and other non-current receivables, gross",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": "장기기타수취채권"
+  },
+  {
+    "concept_id": "ifrs-full_OtherNoncurrentFinancialAssets",
+    "label_ko": "장기투자자산",
+    "label_en": "Long-term investment",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": "장기투자자산"
+  },
+  {
+    "concept_id": "ifrs-full_InvestmentsInJointVentures",
+    "label_ko": "공동기업투자",
+    "label_en": "Investments in joint ventures reported in separate financial statements",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": "공동기업투자"
+  },
+  {
+    "concept_id": "ifrs-full_InvestmentProperty",
+    "label_ko": "투자부동산",
+    "label_en": "Investment property",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": "투자부동산"
+  },
+  {
+    "concept_id": "ifrs-full_PropertyPlantAndEquipment",
+    "label_ko": "유형자산",
+    "label_en": "Property, plant and equipment",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": "유형자산"
+  },
+  {
+    "concept_id": "ifrs-full_RightofuseAssets",
+    "label_ko": "사용권자산",
+    "label_en": "Right-of-use assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": "사용권자산"
+  },
+  {
+    "concept_id": "ifrs-full_IntangibleAssetsOtherThanGoodwill",
+    "label_ko": "무형자산",
+    "label_en": "Intangible assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "비유동자산",
+    "class3": "무형자산"
+  },
+  {
+    "concept_id": "ifrs-full_Assets",
+    "label_ko": "자산총계",
+    "label_en": "Total assets",
+    "class0": "재무상태표 [개요]",
+    "class1": "자산 [개요]",
+    "class2": "자산총계",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_CurrentLiabilities",
+    "label_ko": "유동부채",
+    "label_en": "Current liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ShortTermTradePayables",
+    "label_ko": "매입채무",
+    "label_en": "Short-term trade Payables",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "매입채무"
+  },
+  {
+    "concept_id": "ifrs-full_TradeAndOtherCurrentPayables",
+    "label_ko": "기타지급채무",
+    "label_en": "other current payables",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "기타지급채무"
+  },
+  {
+    "concept_id": "ifrs-full_ShorttermBorrowings",
+    "label_ko": "단기차입금",
+    "label_en": "Current borrowings",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "단기차입금"
+  },
+  {
+    "concept_id": "ifrs-full_CurrentPortionOfLongtermBorrowings",
+    "label_ko": "유동성장기차입금",
+    "label_en": "Current portion of non-current borrowings",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "유동성장기차입금"
+  },
+  {
+    "concept_id": "ifrs-full_OtherCurrentLiabilities",
+    "label_ko": "기타 유동부채",
+    "label_en": "Other current liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "기타 유동부채"
+  },
+  {
+    "concept_id": "ifrs-full_CurrentContractLiabilities",
+    "label_ko": "계약부채",
+    "label_en": "Current contract liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "계약부채"
+  },
+  {
+    "concept_id": "entity01047451_udf_BS_2018813182057133_CurrentLiabilities",
+    "label_ko": "환불부채",
+    "label_en": "refund liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "환불부채"
+  },
+  {
+    "concept_id": "ifrs-full_CurrentLeaseLiabilities",
+    "label_ko": "유동 리스부채",
+    "label_en": "Current lease liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "유동 리스부채"
+  },
+  {
+    "concept_id": "ifrs-full_CurrentProvisions",
+    "label_ko": "유동충당부채",
+    "label_en": "Current provisions",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "유동부채",
+    "class3": "유동충당부채"
+  },
+  {
+    "concept_id": "ifrs-full_NoncurrentLiabilities",
+    "label_ko": "비유동부채",
+    "label_en": "Non-current liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_LongTermTradeAndOtherNonCurrentPayables",
+    "label_ko": "장기기타지급채무",
+    "label_en": "Long-term trade and other non-current payables",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": "장기기타지급채무"
+  },
+  {
+    "concept_id": "dart_LongTermBorrowingsGross",
+    "label_ko": "장기차입금",
+    "label_en": "Long-term borrowings, gross",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": "장기차입금"
+  },
+  {
+    "concept_id": "ifrs-full_NoncurrentLeaseLiabilities",
+    "label_ko": "비유동 리스부채",
+    "label_en": "Non-current lease liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": "비유동 리스부채"
+  },
+  {
+    "concept_id": "ifrs-full_OtherNoncurrentLiabilities",
+    "label_ko": "기타 비유동 부채",
+    "label_en": "Other non-current liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": "기타 비유동 부채"
+  },
+  {
+    "concept_id": "ifrs-full_NoncurrentContractLiabilities",
+    "label_ko": "장기계약부채",
+    "label_en": "Non-current contract liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": "장기계약부채"
+  },
+  {
+    "concept_id": "ifrs-full_NoncurrentProvisions",
+    "label_ko": "비유동충당부채",
+    "label_en": "Non-current provisions",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": "비유동충당부채"
+  },
+  {
+    "concept_id": "ifrs-full_DeferredTaxLiabilities",
+    "label_ko": "이연법인세부채",
+    "label_en": "Deferred tax liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "비유동부채",
+    "class3": "이연법인세부채"
+  },
+  {
+    "concept_id": "ifrs-full_Liabilities",
+    "label_ko": "부채총계",
+    "label_en": "Total liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "부채 [개요]",
+    "class2": "부채총계",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_EquityAttributableToOwnersOfParent",
+    "label_ko": "지배기업의 소유주에게 귀속되는 자본",
+    "label_en": "Equity attributable to owners of parent",
+    "class0": "재무상태표 [개요]",
+    "class1": "자본 [개요]",
+    "class2": "지배기업의 소유주에게 귀속되는 자본",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_IssuedCapital",
+    "label_ko": "자본금",
+    "label_en": "Issued capital",
+    "class0": "재무상태표 [개요]",
+    "class1": "자본 [개요]",
+    "class2": "지배기업의 소유주에게 귀속되는 자본",
+    "class3": "자본금"
+  },
+  {
+    "concept_id": "ifrs-full_SharePremium",
+    "label_ko": "주식발행초과금",
+    "label_en": "Share premium",
+    "class0": "재무상태표 [개요]",
+    "class1": "자본 [개요]",
+    "class2": "지배기업의 소유주에게 귀속되는 자본",
+    "class3": "주식발행초과금"
+  },
+  {
+    "concept_id": "dart_ElementsOfOtherStockholdersEquity",
+    "label_ko": "기타자본구성요소",
+    "label_en": "Elements of other stockholder's equity",
+    "class0": "재무상태표 [개요]",
+    "class1": "자본 [개요]",
+    "class2": "지배기업의 소유주에게 귀속되는 자본",
+    "class3": "기타자본구성요소"
+  },
+  {
+    "concept_id": "ifrs-full_RetainedEarnings",
+    "label_ko": "이익잉여금(결손금)",
+    "label_en": "Retained earnings (deficit)",
+    "class0": "재무상태표 [개요]",
+    "class1": "자본 [개요]",
+    "class2": "지배기업의 소유주에게 귀속되는 자본",
+    "class3": "이익잉여금(결손금)"
+  },
+  {
+    "concept_id": "ifrs-full_Equity",
+    "label_ko": "자본총계",
+    "label_en": "Total equity",
+    "class0": "재무상태표 [개요]",
+    "class1": "자본 [개요]",
+    "class2": "자본총계",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_EquityAndLiabilities",
+    "label_ko": "자본과부채총계",
+    "label_en": "Total equity and liabilities",
+    "class0": "재무상태표 [개요]",
+    "class1": "자본과부채총계",
+    "class2": "",
+    "class3": ""
+  }
+]

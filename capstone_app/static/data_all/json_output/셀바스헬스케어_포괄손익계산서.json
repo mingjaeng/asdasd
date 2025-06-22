@@ -1,0 +1,236 @@
+[
+  {
+    "concept_id": "ifrs-full_Revenue",
+    "label_ko": "수익(매출액)",
+    "label_en": "Revenue",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "수익(매출액)",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_CostOfSales",
+    "label_ko": "매출원가",
+    "label_en": "Cost of sales",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "매출원가",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_GrossProfit",
+    "label_ko": "매출총이익",
+    "label_en": "Gross profit",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "매출총이익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_TotalSellingGeneralAdministrativeExpenses",
+    "label_ko": "판매비와관리비",
+    "label_en": "Selling general administrative expenses",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "판매비와관리비",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_OperatingIncomeLoss",
+    "label_ko": "영업이익",
+    "label_en": "Operating income(loss)",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "영업이익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_FinanceIncome",
+    "label_ko": "금융수익",
+    "label_en": "Finance income",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "금융수익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_FinanceCosts",
+    "label_ko": "금융비용",
+    "label_en": "Finance costs",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "금융비용",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_OtherGains",
+    "label_ko": "기타수익",
+    "label_en": "Other gains",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타수익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_OtherLosses",
+    "label_ko": "기타비용",
+    "label_en": "Other losses",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타비용",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "entity01047451_udf_IS_2025318151811592OfStatementOfComprehensiveIncomeAbstract",
+    "label_ko": "지분법관련이익（손실）",
+    "label_en": "Other income (expense) from subsidiaries, jointly controlled entities and associates",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "지분법관련이익（손실）",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProfitLossBeforeTax",
+    "label_ko": "법인세비용차감전순이익",
+    "label_en": "Profit (loss) before tax",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "법인세비용차감전순이익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_IncomeTaxExpenseContinuingOperations",
+    "label_ko": "법인세비용(수익)",
+    "label_en": "Tax expense (income)",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "법인세비용(수익)",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProfitLoss",
+    "label_ko": "당기순이익",
+    "label_en": "Profit",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "당기순이익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_OtherComprehensiveIncome",
+    "label_ko": "기타포괄손익",
+    "label_en": "Other comprehensive income",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타포괄손익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax",
+    "label_ko": "당기손익으로 재분류되지 않는항목(세후기타포괄손익)",
+    "label_en": "Other comprehensive income that will not be reclassified to profit or loss, net of tax",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타포괄손익",
+    "class2": "당기손익으로 재분류되지 않는항목(세후기타포괄손익)",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_OtherComprehensiveIncomeNetOfTaxGainsLossesOnRevaluation",
+    "label_ko": "재평가잉여금(유형자산)",
+    "label_en": "Other comprehensive income, net of tax, gains (losses) on revaluation of property, plant and equipment, right-of-use assets and intangible assets",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타포괄손익",
+    "class2": "당기손익으로 재분류되지 않는항목(세후기타포괄손익)",
+    "class3": "재평가잉여금(유형자산)"
+  },
+  {
+    "concept_id": "entity01047451_udf_IS_201811915655793_OtherComprehensiveIncomeThatWillNotBeReclassifiedToProfitOrLossNetOfTax",
+    "label_ko": "기타포괄손익-공정가치 측정 금융자산 평가손익",
+    "label_en": "Gains (losses) on financial assets measured at fair value through other comprehensive income",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타포괄손익",
+    "class2": "당기손익으로 재분류되지 않는항목(세후기타포괄손익)",
+    "class3": "기타포괄손익-공정가치 측정 금융자산 평가손익"
+  },
+  {
+    "concept_id": "ifrs-full_OtherComprehensiveIncomeThatWillBeReclassifiedToProfitOrLossNetOfTax",
+    "label_ko": "당기손익으로 재분류될 수 있는 항목(세후기타포괄손익)",
+    "label_en": "Other comprehensive income that will be reclassified to profit or loss, net of tax",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타포괄손익",
+    "class2": "당기손익으로 재분류될 수 있는 항목(세후기타포괄손익)",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_GainsLossesOnExchangeDifferencesOnTranslationNetOfTax",
+    "label_ko": "해외사업장환산외환차이(세후기타포괄손익)",
+    "label_en": "Gains (losses) on exchange differences on translation of foreign operations, net of tax",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "기타포괄손익",
+    "class2": "당기손익으로 재분류될 수 있는 항목(세후기타포괄손익)",
+    "class3": "해외사업장환산외환차이(세후기타포괄손익)"
+  },
+  {
+    "concept_id": "ifrs-full_ComprehensiveIncome",
+    "label_ko": "총포괄손익",
+    "label_en": "Total comprehensive income",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "총포괄손익",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProfitLossAttributableToOwnersOfParent",
+    "label_ko": "지배기업의 소유주에게 귀속되는 당기순이익(손실)",
+    "label_en": "Profit (loss), attributable to owners of parent",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "당기순이익(손실)의 귀속 [개요]",
+    "class2": "지배기업의 소유주에게 귀속되는 당기순이익(손실)",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProfitLossAttributableToNoncontrollingInterests",
+    "label_ko": "비지배지분에 귀속되는 당기순이익(손실)",
+    "label_en": "Profit (loss), attributable to non-controlling interests",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "당기순이익(손실)의 귀속 [개요]",
+    "class2": "비지배지분에 귀속되는 당기순이익(손실)",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ComprehensiveIncomeAttributableToOwnersOfParent",
+    "label_ko": "포괄손익, 지배기업의 소유주에게 귀속되는 지분",
+    "label_en": "Comprehensive income, attributable to owners of parent",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "포괄손익의 귀속 [개요]",
+    "class2": "포괄손익, 지배기업의 소유주에게 귀속되는 지분",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ComprehensiveIncomeAttributableToNoncontrollingInterests",
+    "label_ko": "포괄손익, 비지배지분",
+    "label_en": "Comprehensive income, attributable to non-controlling interests",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "포괄손익의 귀속 [개요]",
+    "class2": "포괄손익, 비지배지분",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_BasicEarningsLossPerShare",
+    "label_ko": "기본주당이익(손실)",
+    "label_en": "Basic earnings (loss) per share",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "주당이익 [개요]",
+    "class2": "기본주당이익(손실)",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_DilutedEarningsLossPerShare",
+    "label_ko": "희석주당이익(손실)",
+    "label_en": "Diluted earnings (loss) per share",
+    "class0": "포괄손익계산서 [개요]",
+    "class1": "주당이익 [개요]",
+    "class2": "희석주당이익(손실)",
+    "class3": ""
+  }
+]

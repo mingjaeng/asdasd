@@ -1,0 +1,326 @@
+[
+  {
+    "concept_id": "ifrs-full_CashFlowsFromUsedInOperatingActivities",
+    "label_ko": "영업활동으로 인한 현금흐름",
+    "label_en": "Cash flows from (used in) operating activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "영업활동으로 인한 현금흐름",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_CashFlowsFromUsedInOperations",
+    "label_ko": "영업으로부터 창출된 현금흐름",
+    "label_en": "Cash flows from (used in) operations",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "영업활동으로 인한 현금흐름",
+    "class2": "영업으로부터 창출된 현금흐름",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_InterestReceivedClassifiedAsOperatingActivities",
+    "label_ko": "이자의 수취",
+    "label_en": "Interest received, classified as operating activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "영업활동으로 인한 현금흐름",
+    "class2": "이자의 수취",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_InterestPaidClassifiedAsOperatingActivities",
+    "label_ko": "이자의 지급",
+    "label_en": "Interest paid, classified as operating activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "영업활동으로 인한 현금흐름",
+    "class2": "이자의 지급",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_DividendsReceivedClassifiedAsOperatingActivities",
+    "label_ko": "배당금의 수령",
+    "label_en": "Dividends received, classified as operating activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "영업활동으로 인한 현금흐름",
+    "class2": "배당금의 수령",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_IncomeTaxesPaidRefundClassifiedAsOperatingActivities",
+    "label_ko": "법인세의 납부",
+    "label_en": "Income taxes paid (refund), classified as operating activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "영업활동으로 인한 현금흐름",
+    "class2": "법인세의 납부",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_CashFlowsFromUsedInInvestingActivities",
+    "label_ko": "투자활동현금흐름",
+    "label_en": "Cash flows from (used in) investing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_InflowsOfCashFromInvestingActivities",
+    "label_ko": "투자활동으로부터의 현금유입액",
+    "label_en": "Inflows of cash from investing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유입액",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfFinancialInstruments",
+    "label_ko": "금융기관예치금의 감소",
+    "label_en": "Proceeds from sales of deposits, not classified as cash equivalents",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유입액",
+    "class3": "금융기관예치금의 감소"
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfLoansAndReceivables",
+    "label_ko": "기타수취채권의 감소",
+    "label_en": "Proceeds from sales of other receivables",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유입액",
+    "class3": "기타수취채권의 감소"
+  },
+  {
+    "concept_id": "dart_ProceedsFromSalesOfOtherFinancialAssets",
+    "label_ko": "기타금융자산의 처분",
+    "label_en": "Proceeds from sales of other financial assets",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유입액",
+    "class3": "기타금융자산의 처분"
+  },
+  {
+    "concept_id": "ifrs-full_ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+    "label_ko": "유형자산의 처분",
+    "label_en": "Proceeds from sales of property, plant and equipment",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유입액",
+    "class3": "유형자산의 처분"
+  },
+  {
+    "concept_id": "ifrs-full_ProceedsFromSalesOfIntangibleAssetsClassifiedAsInvestingActivities",
+    "label_ko": "무형자산의 처분",
+    "label_en": "Proceeds from sales of intangible assets",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유입액",
+    "class3": "무형자산의 처분"
+  },
+  {
+    "concept_id": "ifrs-full_CashFlowsFromLosingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities",
+    "label_ko": "종속기업,관계기업 및 공동기업투자주식의 처분",
+    "label_en": "Cash flows from losing control of subsidiaries or other businesses, classified as investing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유입액",
+    "class3": "종속기업,관계기업 및 공동기업투자주식의 처분"
+  },
+  {
+    "concept_id": "ifrs-full_OutflowsOfCashFromInvestingActivities",
+    "label_ko": "투자활동으로부터의 현금유출액",
+    "label_en": "Outflows of cash from investing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_PurchaseOfFinancialInstrumentsClassifiedAsInvestingActivities",
+    "label_ko": "금융기관예치금의 증가",
+    "label_en": "Purchase of financial instruments, classified as investing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": "금융기관예치금의 증가"
+  },
+  {
+    "concept_id": "dart_PurchaseOfLoansAndReceivables",
+    "label_ko": "기타수취채권의 증가",
+    "label_en": "Purchase of loans and receivables",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": "기타수취채권의 증가"
+  },
+  {
+    "concept_id": "dart_PurchaseOfOtherFinancialAssets",
+    "label_ko": "기타금융자산의 취득",
+    "label_en": "Purchase of other financial assets",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": "기타금융자산의 취득"
+  },
+  {
+    "concept_id": "dart_PurchaseOfInvestmentsInAssociates",
+    "label_ko": "관계기업투자의 취득",
+    "label_en": "Purchase of investments in associates",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": "관계기업투자의 취득"
+  },
+  {
+    "concept_id": "ifrs-full_PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+    "label_ko": "유형자산의 취득",
+    "label_en": "Purchase of property, plant and equipment",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": "유형자산의 취득"
+  },
+  {
+    "concept_id": "ifrs-full_PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities",
+    "label_ko": "무형자산의 취득",
+    "label_en": "Purchase of intangible assets",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": "무형자산의 취득"
+  },
+  {
+    "concept_id": "ifrs-full_PurchaseOfInvestmentProperty",
+    "label_ko": "투자부동산의 취득",
+    "label_en": "Purchase of investment property",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "투자활동현금흐름",
+    "class2": "투자활동으로부터의 현금유출액",
+    "class3": "투자부동산의 취득"
+  },
+  {
+    "concept_id": "ifrs-full_CashFlowsFromUsedInFinancingActivities",
+    "label_ko": "재무활동현금흐름",
+    "label_en": "Cash flows from (used in) financing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "entity00103006_CashInflowFromFinancingActivitiesOfCashFlowsFromUsedInFinancingActivities",
+    "label_ko": "재무활동으로 인한 현금유입액",
+    "label_en": "Cash inflow from financing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유입액",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_ProceedsFromBorrowingsClassifiedAsFinancingActivities",
+    "label_ko": "차입금의 증가",
+    "label_en": "Proceeds from borrowings, classified as financing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유입액",
+    "class3": "차입금의 증가"
+  },
+  {
+    "concept_id": "ifrs-full_ProceedsFromContributionsOfNoncontrollingInterests",
+    "label_ko": "비지배지분의 출자",
+    "label_en": "Proceeds from contributions of non-controlling interests",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유입액",
+    "class3": "비지배지분의 출자"
+  },
+  {
+    "concept_id": "entity00103006_CashOutflowFromFinancingActivitiesOfCashFlowsFromUsedInFinancingActivities",
+    "label_ko": "재무활동으로 인한 현금유출액",
+    "label_en": "Cash outflow from financing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유출액",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+    "label_ko": "차입금의 상환",
+    "label_en": "Repayments of borrowings",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유출액",
+    "class3": "차입금의 상환"
+  },
+  {
+    "concept_id": "ifrs-full_DividendsPaidClassifiedAsFinancingActivities",
+    "label_ko": "배당금지급",
+    "label_en": "Dividends paid",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유출액",
+    "class3": "배당금지급"
+  },
+  {
+    "concept_id": "ifrs-full_PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivities",
+    "label_ko": "리스부채의 상환",
+    "label_en": "Payments of lease liabilities, classified as financing activities",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유출액",
+    "class3": "리스부채의 상환"
+  },
+  {
+    "concept_id": "dart_AcquisitionOfTreasuryShares",
+    "label_ko": "자기주식의 취득",
+    "label_en": "Acquisition of treasury shares",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유출액",
+    "class3": "자기주식의 취득"
+  },
+  {
+    "concept_id": "ifrs-full_PaymentsFromChangesInOwnershipInterestsInSubsidiaries",
+    "label_ko": "종속기업 소유지분 변동",
+    "label_en": "Payments from changes in ownership interests in subsidiaries that do not result in loss of control",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "재무활동현금흐름",
+    "class2": "재무활동으로 인한 현금유출액",
+    "class3": "종속기업 소유지분 변동"
+  },
+  {
+    "concept_id": "ifrs-full_IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+    "label_ko": "환율변동효과 반영전 현금및현금성자산의 순증가(감소)",
+    "label_en": "Net increase (decrease) in cash and cash equivalents before effect of exchange rate changes",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "환율변동효과 반영전 현금및현금성자산의 순증가(감소)",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_CashAndCashEquivalentsAtBeginningOfPeriodCf",
+    "label_ko": "기초 현금및현금성자산",
+    "label_en": "Cash and cash equivalents at beginning of period",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "기초 현금및현금성자산",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "ifrs-full_EffectOfExchangeRateChangesOnCashAndCashEquivalents",
+    "label_ko": "외화표시 현금및현금성자산의 환율변동효과",
+    "label_en": "Effect of exchange rate changes on cash and cash equivalents",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "외화표시 현금및현금성자산의 환율변동효과",
+    "class2": "",
+    "class3": ""
+  },
+  {
+    "concept_id": "dart_CashAndCashEquivalentsAtEndOfPeriodCf",
+    "label_ko": "기말 현금및현금성자산",
+    "label_en": "Cash and cash equivalents at end of period",
+    "class0": "ifrs-full:StatementOfCashFlowsAbstract",
+    "class1": "기말 현금및현금성자산",
+    "class2": "",
+    "class3": ""
+  }
+]
